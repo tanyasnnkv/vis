@@ -31,7 +31,7 @@ jobs:
       - name: Run tests
         run: dotnet test --no-build --verbosity normal
 
- docker:
+  docker:
     needs: build-and-test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
